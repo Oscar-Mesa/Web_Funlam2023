@@ -34,6 +34,7 @@
             <div class="btn-group">
                 <asp:Button ID="btn_registrar" runat="server" Text="Registrar" CssClass="btn" OnClick="btn_registrar_Click" />
                 <asp:Button ID="btn_cancelar" runat="server" Text="Cancelar" CssClass="btn btn-cancelar" />
+                <asp:Button ID="btn_consultar" runat="server" Text="Consulta" CssClass="btn" OnClick="btn_consultar_Click" />
             </div>
             <asp:Label ID="lbl_mensaje" runat="server" Text=""></asp:Label>
         </div>
