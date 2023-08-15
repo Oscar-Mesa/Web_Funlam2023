@@ -30,5 +30,15 @@ namespace App_Comercio
             txt_direccion.Text = objconsultar.getDireccion();
             txt_nombre.Text = objconsultar.getNombre();
         }
+
+        protected void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            txt_codigo.Text = "";
+            txt_contacto.Text = "";
+            txt_correo.Text = "";
+            txt_direccion.Text = "";
+            txt_nombre.Text = "";
+            txt_codigo.Focus();
+        }
     }
 }
