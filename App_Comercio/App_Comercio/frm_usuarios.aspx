@@ -12,24 +12,24 @@
         <div id="container">
             <h3>Formulario de Registro de Usuarios</h3>
             <div class="form-group">
-                <label for="txt_codigo">Código</label>
-                <asp:TextBox ID="txt_codigo" runat="server" placeholder="Código"></asp:TextBox>
+                <label for="txt_codigo">Código</label> * 
+                <asp:TextBox ID="txt_codigo" runat="server" placeholder="Código" required ="true"></asp:TextBox> 
             </div>
             <div class="form-group">
-                <label for="txt_nombre">Nombre</label>
-                <asp:TextBox ID="txt_nombre" runat="server" placeholder="Nombre"></asp:TextBox>
+                <label for="txt_nombre">Nombre</label> * 
+                <asp:TextBox ID="txt_nombre" runat="server" placeholder="Nombre"></asp:TextBox> 
             </div>
             <div class="form-group">
-                <label for="txt_contacto">Contacto</label>
-                <asp:TextBox ID="txt_contacto" runat="server" placeholder="Contacto"></asp:TextBox>
+                <label for="txt_contacto">Contacto</label> *
+                <asp:TextBox ID="txt_contacto" runat="server" placeholder="Contacto" ></asp:TextBox> 
             </div>
             <div class="form-group">
-                <label for="txt_correo">Correo</label>
-                <asp:TextBox ID="txt_correo" runat="server" placeholder="Correo"></asp:TextBox>
+                <label for="txt_correo">Correo</label> * 
+                <asp:TextBox ID="txt_correo" runat="server" placeholder="Correo" ></asp:TextBox> 
             </div>
             <div class="form-group">
-                <label for="txt_direccion">Dirección</label>
-                <asp:TextBox ID="txt_direccion" runat="server" placeholder="Dirección"></asp:TextBox>
+                <label for="txt_direccion">Dirección</label> *
+                <asp:TextBox ID="txt_direccion" runat="server" placeholder="Dirección" ></asp:TextBox> 
             </div>
             <div class="btn-group">
                 <asp:Button ID="btn_registrar" runat="server" Text="Registrar" CssClass="btn" OnClick="btn_registrar_Click" />
