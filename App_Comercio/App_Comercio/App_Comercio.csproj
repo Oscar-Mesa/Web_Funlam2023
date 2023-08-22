@@ -67,13 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="estilo.css" />
+    <Content Include="estilos.css" />
+    <Content Include="frm_productos.aspx" />
     <Content Include="frm_usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cls_conexion.cs" />
+    <Compile Include="cls_productos.cs" />
     <Compile Include="cls_usuarios.cs" />
+    <Compile Include="frm_productos.aspx.cs">
+      <DependentUpon>frm_productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_productos.aspx.designer.cs">
+      <DependentUpon>frm_productos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frm_usuarios.aspx.cs">
       <DependentUpon>frm_usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

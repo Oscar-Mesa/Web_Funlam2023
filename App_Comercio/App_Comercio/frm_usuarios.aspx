@@ -5,7 +5,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Formulario de Registro de Usuarios</title>
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,7 +33,7 @@
             </div>
             <div class="btn-group">
                 <asp:Button ID="btn_registrar" runat="server" Text="Registrar" CssClass="btn" OnClick="btn_registrar_Click" />
-                <asp:Button ID="btn_cancelar" runat="server" Text="Cancelar" CssClass="btn btn-cancelar" />
+                <asp:Button ID="btn_cancelar" runat="server" Text="Cancelar" CssClass="btn btn-cancelar" OnClick="btn_cancelar_Click" />
                 <asp:Button ID="btn_consultar" runat="server" Text="Consulta" CssClass="btn" OnClick="btn_consultar_Click" />
             </div>
             <asp:Label ID="lbl_mensaje" runat="server" Text=""></asp:Label>

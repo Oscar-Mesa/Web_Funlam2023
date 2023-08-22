@@ -18,23 +18,29 @@ namespace App_Comercio
         private string str_direccion;
         public void fnt_agregar(string codigo, string nombre, string contacto, string correo, string direccion)
         {
+            if ((nombre == "") || (contacto =="") || (correo=="") || (direccion == ""))
+            {
+                str_mensaje = "Llene los campos obligatorios";
+            }
+            else { 
             try
             {
-                cls_conexion objConecta = new cls_conexion();
-                SqlCommand con = new SqlCommand("sp_agregarusuario", objConecta.connection);
-                con.CommandType = CommandType.StoredProcedure;
-                con.Parameters.AddWithValue("@codigo", codigo);
-                con.Parameters.AddWithValue("@nombre", nombre);
-                con.Parameters.AddWithValue("@contacto", contacto);
-                con.Parameters.AddWithValue("@correo", correo);
-                con.Parameters.AddWithValue("@direccion", direccion);
+                    cls_conexion objConecta = new cls_conexion();
+                    SqlCommand con = new SqlCommand("sp_agregarusuario", objConecta.connection);
+                    con.CommandType = CommandType.StoredProcedure;
+                    con.Parameters.AddWithValue("@codigo", codigo);
+                    con.Parameters.AddWithValue("@nombre", nombre);
+                    con.Parameters.AddWithValue("@contacto", contacto);
+                    con.Parameters.AddWithValue("@correo", correo);
+                    con.Parameters.AddWithValue("@direccion", direccion);
 
-                objConecta.connection.Open();
-                con.ExecuteNonQuery();
-                objConecta.connection.Close();
-                str_mensaje = "Registro exitoso";
-            }
-            catch (Exception) { str_mensaje = "Faltan campos / este registro ya existe"; }
+                    objConecta.connection.Open();
+                    con.ExecuteNonQuery();
+                    objConecta.connection.Close();
+                    str_mensaje = "Registro exitoso";
+                }
+                catch (Exception) { str_mensaje = "Faltan campos / este registro ya existe"; }
+                }
         }
 
         public void fnt_consultar(string codigo)
@@ -59,8 +65,11 @@ namespace App_Comercio
             catch (Exception)
             {
                 str_mensaje = "No se encontraron registros";
-            }
+            }   
         }
+
+
+        
         public string getMensaje() { return this.str_mensaje; }
         public string getNombre() { return this.str_nombre; }
         public string getContacto() { return this.str_contacto; }
